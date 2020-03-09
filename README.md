@@ -20,6 +20,7 @@ This repository is created for committing code developed for the Quanteon interv
 
 ## Backend JSON data (needed for testing purpose, also tester can modify "checkedIn" flag(path: /quanteon-interview-task/back-end/data/data.json) for passenger checkin status check)
 
+```
 
 1. confirmationNo : axyz001002
    LastName: Mishra
@@ -27,9 +28,12 @@ This repository is created for committing code developed for the Quanteon interv
 2. confirmationNo : bpqr001002
    LastName: Halder
    
+```
+
+
    
  ## data.json
-
+```
 [
   {
     "confirmationNo": "axyz001002",
@@ -106,4 +110,6 @@ This repository is created for committing code developed for the Quanteon interv
     }
   }
 ]
+
+```
 
