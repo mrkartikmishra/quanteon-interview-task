@@ -1,0 +1,55 @@
+.boarding-pass-container {
+  height: 350px;
+  width: 100%;
+  border: 2px solid rgb(232, 248, 5);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgb(240, 238, 236);
+}
+
+.boarding-pass-header-row {
+  width: 100% !important;
+  margin-right: 0px;
+  padding-right: 0px;
+  margin-left: 0px !important;
+}
+.boarding-pass-header {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(247, 199, 41);
+  border-top-left-radius: 50px !important;
+}
+.boarding-pass-footer {
+  height: 20px;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(247, 199, 41);
+  border-radius: 10px !important;
+}
+.labelCls {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.labelTextCls {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  border: 1px solid rgb(203, 240, 134);
+  font-size: 0.9rem;
+}
+
+.detailsRow {
+  margin-left: 1px;
+}
+.detailsRow-right {
+  margin-left: 7rem;
+}
+.qrcode-img {
+  height: 100px;
+  width: 100px;
+}
+
+.confirm-btn {
+  border-radius: 0%;
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "confirmationNo": "axyz001002",
+    "firstName": "Kartik",
+    "lastName": "Mishra",
+    "contactNo": "9732107674",
+    "email": "kartikmishra.km44@gmail.com",
+    "passengers": [
+      {
+        "pid": 1,
+        "name": "Kartik Mishra",
+        "age": 29,
+        "seatNo": 20,
+        "checkedIn": false
+      },
+      {
+        "pid": 2,
+        "name": "Rahul Roy",
+        "age": 30,
+        "seatNo": 45,
+        "checkedIn": false
+      }
+    ],
+    "flightDetails": {
+      "id": "ABC-G8",
+      "company": "XyzAirline",
+      "duration": 590,
+      "segment": [
+        {
+          "duration": 590,
+          "departureTime": "2020-04-04T21:30-03:00",
+          "arrivalTime": "2016-04-05T06:20-04:00",
+          "origin": "Kolkata",
+          "destination": "Hyderabad"
+        }
+      ]
+    }
+  },
+  {
+    "confirmationNo": "bpqr001002",
+    "firstName": "Gopal",
+    "lastName": "Halder",
+    "contactNo": "9832486745",
+    "email": "gopal.halder@gmail.com",
+    "passengers": [
+      {
+        "pid": 1,
+        "name": "Priya Chakraborty",
+        "age": 25,
+        "seatNo": 30,
+        "checkedIn": false
+      },
+      {
+        "pid": 2,
+        "name": "Sachin Burma",
+        "age": 45,
+        "seatNo": 41,
+        "checkedIn": false
+      }
+    ],
+    "flightDetails": {
+      "id": "XYZ-W7",
+      "company": "XyzAirline",
+      "duration": 750,
+      "segment": [
+        {
+          "duration": 750,
+          "departureTime": "2020-05-10T21:30-03:00",
+          "arrivalTime": "2016-05-11T06:20-04:00",
+          "origin": "Delhi",
+          "destination": "Mumbai"
+        }
+      ]
+    }
+  }
+]

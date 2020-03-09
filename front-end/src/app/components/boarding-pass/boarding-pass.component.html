@@ -1,0 +1,126 @@
+<div class="container">
+  <div class="row text-center mt-2">
+    <div class="col-md-12">
+      <h4>Boarding Pass</h4>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-12">
+      <div class="boarding-pass-container">
+        <div class="row boarding-pass-header-row">
+          <div class="col-md-12 text-center boarding-pass-header">
+            <h4 class="mt-2"><i>Boarding Pass</i></h4>
+          </div>
+        </div>
+        <div class="row mt-2 detailsRow">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">Name of Passenger</label
+                ><br />
+                <span class="labelTextCls">{{ boardingDetails.pname }}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">From</label><br />
+                <span class="labelTextCls">{{ boardingDetails.source }}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">To</label><br />
+                <span class="labelTextCls">{{
+                  boardingDetails.destination
+                }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <img
+                  src="../../../assets/qr-code-img.png"
+                  class="img-responsive qrcode-img"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">Flight Datetime</label
+                ><br />
+                <span class="labelTextCls">{{
+                  boardingDetails.departureTime
+                }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">Name of Passenger</label
+                ><br />
+                <span class="labelTextCls">{{ boardingDetails.pname }}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">From</label><br />
+                <span class="labelTextCls">{{ boardingDetails.source }}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="pName" class="labelCls">To</label><br />
+                <span class="labelTextCls">{{
+                  boardingDetails.destination
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row detailsRow">
+          <div class="col-md-2">
+            <label for="pName" class="labelCls">Seat No.</label><br />
+            <span class="labelTextCls">{{ boardingDetails.pseatNo }}</span>
+          </div>
+          <div class="col-md-2 ml-4">
+            <label for="pName" class="labelCls">Gate</label><br />
+            <span class="labelTextCls text-center">2B</span>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-2">
+            <label for="pName" class="labelCls">Seat No.</label><br />
+            <span class="labelTextCls">{{ boardingDetails.pseatNo }}</span>
+          </div>
+          <div class="col-md-2 ml-4">
+            <label for="pName" class="labelCls">Gate</label><br />
+            <span class="labelTextCls text-center">2B</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 text-center boarding-pass-footer"></div>
+    </div>
+  </div>
+  <div class="row text-center mt-4">
+    <div class="col-md-12">
+      <button
+        class="btn btn-outline-primary confirm-btn"
+        (click)="onConfirmBoardingPass()"
+      >
+        Confirm
+      </button>
+      <button
+        class="btn btn-outline-success ml-5 confirm-btn"
+        (click)="onBackBoardingPass()"
+      >
+        BACK
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <app-error-message [errorMessage]="errorMessage"></app-error-message>
+    </div>
+  </div>
+</div>

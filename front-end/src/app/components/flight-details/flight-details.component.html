@@ -1,0 +1,125 @@
+<div class="row confirmation-text">
+  <div class="col-md-12">
+    <h2>Confirmation Details</h2>
+  </div>
+</div>
+<div class="row confirmation-text">
+  <div class="col-md-12 table-responsive">
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Confirmation No.</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email ID</th>
+          <th>Contact Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ flightDetailsReceived.data.confirmationNo }}</td>
+          <td>{{ flightDetailsReceived.data.firstName }}</td>
+          <td>{{ flightDetailsReceived.data.lastName }}</td>
+          <td>{{ flightDetailsReceived.data.email }}</td>
+          <td>{{ flightDetailsReceived.data.contactNo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row confirmation-text">
+  <div class="col-md-6 table-responsive">
+    <h3>Passenger Details</h3>
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Seat No.</th>
+          <th>CheckedIn?</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let passenger of flightDetailsReceived.data.passengers">
+          <td>{{ passenger.name }}</td>
+          <td>{{ passenger.age }}</td>
+          <td>{{ passenger.seatNo }}</td>
+          <td>{{ passenger.checkedIn == true ? "Yes" : "No" }}</td>
+          <td>
+            <button
+              class="btn btn-outline-primary"
+              (click)="
+                onCheckinPassenger({
+                  confirmationNo: flightDetailsReceived.data.confirmationNo,
+                  firstName: flightDetailsReceived.data.firstName,
+                  lastName: flightDetailsReceived.data.lastName,
+                  contactNo: flightDetailsReceived.data.contactNo,
+                  pid: passenger.pid,
+                  pname: passenger.name,
+                  page: passenger.age,
+                  pseatNo: passenger.seatNo,
+                  flightId: flightDetailsReceived.data.flightDetails.id,
+                  company: flightDetailsReceived.data.flightDetails.company,
+                  duration: flightDetailsReceived.data.flightDetails.duration,
+                  source:
+                    flightDetailsReceived.data.flightDetails.segment[0].origin,
+                  destination:
+                    flightDetailsReceived.data.flightDetails.segment[0]
+                      .destination,
+                  departureTime:
+                    flightDetailsReceived.data.flightDetails.segment[0]
+                      .departureTime
+                })
+              "
+            >
+              Check In
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6 table-responsive">
+    <h3>Flight Details</h3>
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>Flight No.</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ flightDetailsReceived.data.flightDetails.id }}</td>
+          <td>
+            {{ flightDetailsReceived.data.flightDetails.segment[0].origin }}
+          </td>
+          <td>
+            {{
+              flightDetailsReceived.data.flightDetails.segment[0].destination
+            }}
+          </td>
+          <td>
+            {{
+              flightDetailsReceived.data.flightDetails.segment[0].departureTime
+            }}
+          </td>
+          <td>
+            {{
+              flightDetailsReceived.data.flightDetails.segment[0].arrivalTime
+            }}
+          </td>
+          <td>
+            {{ flightDetailsReceived.data.flightDetails.segment[0].duration }}
+            min(s)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

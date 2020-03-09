@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row confirmation-text">
+    <div class="col-md-12">
+      <h2>Get Confirmation Details</h2>
+    </div>
+  </div>
+  <div class="row confirmation-form">
+    <div class="col-md-12">
+      <form
+        [formGroup]="ticketConfirmationDetails"
+        (ngSubmit)="onSubmitConfirmationDetails()"
+      >
+        <div class="form-group">
+          <label for="confirmationNo"
+            ><span class="required-text">*</span>Confirmation No. :</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="confirmationNo"
+            placeholder="Enter Confirmation Number"
+            name="confirmationNo"
+            formControlName="confirmationNo"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName"
+            ><span class="required-text">*</span>Last Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder="Enter Last Name"
+            name="lastName"
+            formControlName="lastName"
+          />
+        </div>
+        <button
+          [disabled]="!ticketConfirmationDetails.valid"
+          type="submit"
+          class="btn btn-primary confirmation-btn"
+        >
+          Submit
+        </button>
+        <button
+          [disabled]="!ticketConfirmationDetails.valid"
+          type="button"
+          (click)="onResetConfirmationDetailsForm()"
+          class="btn btn-outline-primary reset-btn"
+        >
+          Reset
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <app-error-message [errorMessage]="errorMessage"></app-error-message>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row" *ngIf="isBookingPresent">
+    <div class="col-md-12 mx-auto">
+      <app-flight-details [flightDetails]="bookingDetails"></app-flight-details>
+    </div>
+  </div>
+</div>
